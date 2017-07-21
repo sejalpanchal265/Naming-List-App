@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myNameListApp">
+  <head>
+  	<title>Family Name List App/title>
+    
+  </head>
+
+  <body ng-controller="myctr">
+ <div>
+        <form>
+            <fieldset>
+                <legend>Enter Full Name</legend>
+        <div><b>Enter Firstname : </b><input ng-model="firstname"></input><div>
+            <br>
+        <div> <b>Enter Lasttname  : </b><input ng-model="lastname"></input></div><br>
+              <button ng-click="call()">Click to submit</button>
+              <button ng-click="delete()">Click to delete</button>
+            </fieldset>
+            </form>
+        <h2>This is the Family Name list app</h2><form><fieldset><legend>NameList</legend>
+        <div ng-repeat="name in names">
+             <input type="checkbox" ng-model="name.done">
+                 
+           <span>{{name.firstname}}<span>
+               <span>{{name.lastname}}</span></fieldset></form>
+        </div>
+            
+           
+    </div>
+  	<script src="script/angular.js" ></script>
+  
+    <script src="app.js"></script>  
+  </body>
+    
+</html>
